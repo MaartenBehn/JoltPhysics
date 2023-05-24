@@ -166,7 +166,7 @@ private:
 };
 
 /// Base class for all shapes (collision volume of a body). Defines a virtual interface for collision detection.
-class JPH_EXPORT Shape : public RefTarget<Shape>, public NonCopyable
+class JPH_EXPORT Shape : public RefTarget<Shape>
 {
 public:
 	JPH_OVERRIDE_NEW_DELETE

@@ -133,7 +133,7 @@ protected:
 	/// Vertex list that forms a unit sphere
 	static const std::vector<Vec3>	sUnitSphereTriangles;
 
-private:
+public:
 	// Class for GetTrianglesStart/Next
 	class							CSGetTrianglesContext;
 
