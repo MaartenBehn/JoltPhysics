@@ -6,7 +6,7 @@
 
 JPH_NAMESPACE_BEGIN
 
-#ifndef JPH_DISABLE_CUSTOM_ALLOCATOR
+#ifdef JPH_DISABLE_CUSTOM_ALLOCATOR
 
 /// STL allocator that forwards to our allocation functions
 template <typename T>
