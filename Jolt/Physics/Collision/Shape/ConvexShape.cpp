@@ -57,13 +57,13 @@ void ConvexShape::sCollideConvexVsConvex(const Shape *inShape1, const Shape *inS
 	Mat44 transform_2_to_1 = inverse_transform1 * inCenterOfMassTransform2;
 
 	// Get bounding boxes
-	AABox shape1_bbox = shape1->GetLocalBounds().Scaled(inScale1);
-	shape1_bbox.ExpandBy(Vec3::sReplicate(inCollideShapeSettings.mMaxSeparationDistance));
-	AABox shape2_bbox = shape2->GetLocalBounds().Scaled(inScale2);
+	// AABox shape1_bbox = shape1->GetLocalBounds().Scaled(inScale1);
+	// shape1_bbox.ExpandBy(Vec3::sReplicate(inCollideShapeSettings.mMaxSeparationDistance));
+	// AABox shape2_bbox = shape2->GetLocalBounds().Scaled(inScale2);
 
 	// Check if they overlap
-	if (!OrientedBox(transform_2_to_1, shape2_bbox).Overlaps(shape1_bbox))
-		return;
+	//if (!OrientedBox(transform_2_to_1, shape2_bbox).Overlaps(shape1_bbox))
+	//	return;
 
 	// Note: As we don't remember the penetration axis from the last iteration, and it is likely that shape2 is pushed out of
 	// collision relative to shape1 by comparing their COM's, we use that as an initial penetration axis: shape2.com - shape1.com
